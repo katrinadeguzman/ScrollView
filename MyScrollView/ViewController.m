@@ -1,3 +1,4 @@
+
 //
 //  ViewController.m
 //  MyScrollView
@@ -7,6 +8,7 @@
 //
 
 #import "ViewController.h"
+#import "MyScrollView.h"
 @interface ViewController ()
 
 @end

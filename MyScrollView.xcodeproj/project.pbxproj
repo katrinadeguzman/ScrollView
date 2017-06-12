@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7E679761EEF1ED9002D9103 /* MyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E679751EEF1ED9002D9103 /* MyScrollView.m */; };
 		D7F445E81EEF1C68002B68AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7F445E71EEF1C68002B68AF /* main.m */; };
 		D7F445EB1EEF1C68002B68AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7F445EA1EEF1C68002B68AF /* AppDelegate.m */; };
 		D7F445EE1EEF1C68002B68AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7F445ED1EEF1C68002B68AF /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D7E679741EEF1ED9002D9103 /* MyScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyScrollView.h; sourceTree = "<group>"; };
+		D7E679751EEF1ED9002D9103 /* MyScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScrollView.m; sourceTree = "<group>"; };
 		D7F445E31EEF1C68002B68AF /* MyScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F445E71EEF1C68002B68AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D7F445E91EEF1C68002B68AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 			children = (
 				D7F445E91EEF1C68002B68AF /* AppDelegate.h */,
 				D7F445EA1EEF1C68002B68AF /* AppDelegate.m */,
+				D7E679741EEF1ED9002D9103 /* MyScrollView.h */,
+				D7E679751EEF1ED9002D9103 /* MyScrollView.m */,
 				D7F445EC1EEF1C68002B68AF /* ViewController.h */,
 				D7F445ED1EEF1C68002B68AF /* ViewController.m */,
 				D7F445EF1EEF1C68002B68AF /* Main.storyboard */,
@@ -277,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7F445EE1EEF1C68002B68AF /* ViewController.m in Sources */,
+				D7E679761EEF1ED9002D9103 /* MyScrollView.m in Sources */,
 				D7F445EB1EEF1C68002B68AF /* AppDelegate.m in Sources */,
 				D7F445E81EEF1C68002B68AF /* main.m in Sources */,
 			);
@@ -518,6 +524,7 @@
 				D7F446121EEF1C68002B68AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7F446131EEF1C68002B68AF /* Build configuration list for PBXNativeTarget "MyScrollViewTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +533,7 @@
 				D7F446151EEF1C68002B68AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7F446161EEF1C68002B68AF /* Build configuration list for PBXNativeTarget "MyScrollViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +542,7 @@
 				D7F446181EEF1C68002B68AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
