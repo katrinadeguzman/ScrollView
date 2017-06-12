@@ -21,18 +21,13 @@
 {
     [super viewDidLoad];
     
-    UIView* view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height +200)];//allowance to make yellow visible
+    UIView* view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height +200)];//200px allowance to make yellow visible
     self.myView = view;
     
     MyScrollView *scroll = [[MyScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     [self.view addSubview:scroll];
     self.scroll = scroll;
     [scroll addSubview:view];
-    
-    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGesture:)];
-    [self.scroll setUserInteractionEnabled:YES];
-    [self.scroll addGestureRecognizer:pan];
-    
     self.scroll.contentSize = CGSizeMake(view.bounds.size.width, view.bounds.size.height);
     
     UIView* redView = [[UIView alloc]initWithFrame:CGRectMake(20, 20, 100, 100)];
@@ -54,17 +49,22 @@
 
 - (IBAction)panGesture:(UIPanGestureRecognizer*)sender
 {
-    if (sender.state == UIGestureRecognizerStateChanged)
-    {
-        self.y = self.scroll.bounds.origin.y;
-    }
-    
     CGPoint translation = [sender translationInView:self.myView];
     
     CGRect scrollBounds = self.scroll.bounds;
     
     scrollBounds.origin.y = self.y - translation.y;
-
+    
+    if ((self.y - translation.y) < 0)
+    {
+        scrollBounds.origin.y = 0;
+    }
+    
+    if((self.y - translation.y) > (((self.scroll.contentSize.height)-self.scroll.frame.size.height)))
+    {
+        scrollBounds.origin.y = ((self.scroll.contentSize.height)-self.scroll.frame.size.height);
+    }
+    
     self.scroll.bounds = scrollBounds;
 }
 
@@ -73,6 +73,4 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 @end
